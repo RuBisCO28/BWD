@@ -1,0 +1,415 @@
+    1  yum install openssh-server
+    2  vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+    3  reboot
+    4  ls -rlt
+    5  yum install openssh-server
+    6  service sshd.service status
+    7  shutdown -h now
+    8  ls -rlt
+    9  ls -lrt
+   10  yum update
+   11  ls -lrt
+   12  yum install vim perl gcc
+   13  yum install git
+   14  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+   15  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+   16  ~/.rbenv/bin/rbenv init
+   17  source ~/.bash_profile
+   18  rbenv -v
+   19   git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+   20  ~/.rbenv/plugins/ruby-build/install.sh
+   21  sudo yum install -y openssl-devel readline-devel zlib-devel bzip2
+   22  CONFIGURE_OPTS="--disable-install-rdoc" rbenv install 2.6.5
+   23  echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+   24  source ~/.bash_profile
+   25  rbenv global 2.6.5
+   26  ruby -v
+   27  printf "install: --no-document \nupdate:  --no-document\n" >> ~/.gemrc
+   28  gem install rails -v 6.0.0
+   29  ls -lrt
+   30  useradd vega
+   31  sudo vega
+   32  su vega
+   34  rails
+   35  mkdir test
+   36  cd test/
+   37  rails _6.0.0_ new hello_app
+   38  yum install sqlite3
+   39  yum install sqlite-devel
+   40  ls -lrt
+   41  rails _6.0.0_ new hello_app
+   42  yum install -y epel-release
+   43  yum remove nodejs npm
+   44  curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
+   45  sudo yum install -y nodejs
+   46  sudo npm install yarn -g
+   47  ls -lrt
+   48  rails _6.0.0_ new hello_app
+   49  ls -lrt
+   50  cd hello_app/
+   51  ls -lrt
+   52  vi Gemfile
+   53  vi ~/.vimrc
+   54  vi Gemfile
+   55  bundle install
+   56  rails server
+   57  sudo shutdown -h now
+   58  cd test/hello_app/
+   59  rails server
+   60  sudo shutdown -h now
+      61  cd test/hello_app/
+   62  rails server
+   63  sudo firewall-cmd --permanent --add-port=3000/tcp
+   64   sudo firewall-cmd --reload
+   65  sudo firewall-cmd --list-all
+   66  sudo shutdown -h now
+   67  exit
+   68  cd test/hello_app/
+   69  bundle exec rails s
+   70  bundle exec rails s -b 0.0.0.0
+   71  cd
+   72  wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz
+   73  yum install wget
+   74  yum remove sqlite-devel
+   75  tar xzvf sqlite-autoconf-3290000.tar.gz
+   76  ls -lrt
+   77  wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz
+   78  tar xzvf sqlite-autoconf-3290000.tar.gz
+   79  cd sqlite-autoconf-3290000
+   80  ./configure --prefix=/opt/sqlite/sqlite3
+   81  make
+   82  make install
+   83  /opt/sqlite/sqlite3/bin/sqlite3 --version
+   84   gem uninstall sqlite3
+   85  gem install sqlite3 -- --with-sqlite3-lib=/opt/sqlite/sqlite3/lib
+   86  cd
+   87  ls
+   88  cd test/
+   89  ls -lrt
+   90  cd hello_app/
+   91  bundle exec rails s -b 0.0.0.0
+   92  vi Gemfile
+   93   gem uninstall sqlite3
+   94  gem install sqlite3 -- --with-sqlite3-lib=/opt/sqlite/sqlite3/lib
+   95   gem install sqlite3
+   96  ls /opt/sqlite/sqlite3
+   97  rm -r /opt/sqlite/sqlite3
+   98  rm -rf /opt/sqlite/sqlite3
+   99  cd
+  100  ls -lt
+  101  rm -r sqlite-autoconf-3290000
+  102  rm -rf sqlite-autoconf-3290000
+  103  rm sqlite-autoconf-3290000.tar.gz
+  104  ls -lrt
+  105  cd test/hello_app/
+  106  ls -lrt
+  107  gem install sqlite3
+  108  yum install sqlite-devel
+  109  gem install sqlite3
+  110  sqlite3
+  111  cd
+  112  ls -lrt
+  113  wget https://www.sqlite.org/2019/sqlite-autoconf-3280000.tar.gz
+  114  tar xvfz sqlite-autoconf-3280000.tar.gz
+  115  cd sqlite-autoconf-3280000
+  116  ./configure --prefix=/usr/local
+  117  make
+  118  sudo make install
+  119  sudo find /usr/ -name sqlite3
+    120  /usr/local/bin/sqlite3
+  121  sudo mv /usr/bin/sqlite3 /usr/bin/sqlite3_old
+  122  ln -s /usr/local/bin/sqlite3 /usr/bin/sqlite3
+  123  export LD_LIBRARY_PATH="/usr/local/lib"
+  124  vi ~/.bashrc
+  125  source ~/.bashrc
+  126  exit
+  127  sqlite3
+  128  cd
+  129  cd test/hello_app/
+  130  gem install sqlite3
+  131   gem uninstall sqlite3
+  132  gem install sqlite3 -- --with-sqlite3-lib=/usr/bin/sqlite3
+  133   gem uninstall sqlite3
+  134  gem install sqlite3
+  135  bundle exec rails s -b 0.0.0.0
+  136  ls app/controllers/*_controller.rb
+  137  vi ls app/controllers/*_controller.rb
+  138  vi app/controllers/*_controller.rb
+  139  vi config/routes.rb
+  140  bundle exec rails s -b 0.0.0.0
+  141  vi app/controllers/*_controller.rb
+  142  bundle exec rails s -b 0.0.0.0
+  143  vi app/controllers/*_controller.rb
+  144  vi config/routes.rb
+  145  bundle exec rails s -b 0.0.0.0
+  146  cd
+  147  ls -lrt
+  148  mv test rails_test
+  149  cd rails_test/
+  150  ls -lrt
+  151  cd hello_app/
+  152  ls -lrt
+  153  vi README.md
+  154  cd ../
+  155  ls -lrt
+  156  git init
+  157  git config --global user.name "RuBisCO28"
+  158  git config --global user.email 54470624+RuBisCO28@users.noreply.github.com
+  159  git add -A
+  160  git status
+  161  git commit -m "Initialize repository"
+  162  git log
+  163  ls -lrt
+  164  mkdir a
+  165  git add -A
+  166  git status
+  167  rm -r a
+  168  cd hello_app/
+  169  ls -lrt
+  170  rm README.md
+  171  git status
+  172  ls app/controllers/
+  173  rm -rf app/controllers/
+  174  git status
+  175  git log
+  176  git checkout -f
+  177  git status
+  178  cd
+    179  cd te
+  180  ls -lrt
+  181  cd rails_test/
+  182  ls -lrt
+  183  git add -A
+  184  git log
+  185  git status
+  186  git checkout -f
+  187  git status
+  188  ls -lrt
+  189  ls hello_app/
+  190  ssh-keygen -t rsa -b 4096 -C 54470624+RuBisCO28@users.noreply.github.com
+  191  cat ~/.ssh/id_rsa.pub
+  192  git remote add origin git@github.com:RuBisCo28/rails_test.git
+  193  git push -u origin --all
+  194  ssh -T git@github.com
+  195  ls -lrt
+  196  exit
+  197  ls -lrt
+  198  cd rails_test/
+  199  ls -lrt
+  200  cd hello_app/
+  201  ls -lrt
+  202  cd ..
+  203  git remote add origin git@github.com:RuBisCO28/rails_test.git
+  204  git status
+  205  git add .
+  206  git commit -m "first commit"
+  207  ls
+  208  history > setup
+  209  vi setup
+  210  mv setup setup.bash
+  211  ls -lrt
+  212  vi setup.bash
+  213  git add .
+  214  git commit -m "first commit"
+  215  git remote add origin git@github.com:RuBisCO28/rails_test.git
+  216  ls -lrt
+  217  rm -rf .git
+  218  rm -rf hello_app/.git
+  219  ls -lrt
+  220  cd ../
+  221  ls -la
+  222  cd rails_test/
+  223  ls -lrt
+  224  git init
+  225  git commit -m "first commit"
+  226  git add .
+  227  git commit -m "first commit"
+  228  git remote add origin https://github.com/RuBisCO28/rails_test.git
+  229  git push -u origin master
+  230  rm -rf .git
+  231  rm hello_app/.gitignore
+  232  git init
+  233  git add .
+  234  git commit -m "first commit"
+  235  rm -rf .git
+  236  ls -lrt
+  237  cd hello_app/
+    238  ls -lrt
+  239  rm tmp/cache/bootsnap-compile-cache/*
+  240  rm -rf tmp/cache/bootsnap-compile-cache/*
+  241  ls -lrt
+  242  cd
+  243  cd rails_test/
+  244  ls -lrt
+  245  df -h
+  246  cat hello_app/log/.keep
+  247  cat hello_app/log/development.log
+  248  rm hello_app/log/development.log
+  249  ls -lt
+  250  cd hello_app/
+  251  cat ../setup.bash
+  252  bundle exec rails s -b 0.0.0.0
+  253  ls -lrt
+  254  cat ../setup.bash
+  255  sqlite3 -version
+  256  bundle exec rails s -b 0.0.0.0
+  257  cat ../setup.bash
+  258  gem bundle update
+  259  gem bundle install sqlite3
+  260  history | grep "sqlite3"
+  261  bundle exec rails s -b 0.0.0.0
+  262   gem uninstall sqlite3
+  263   gem install sqlite3
+  264  bundle exec rails s -b 0.0.0.0
+  265   gem uninstall sqlite3
+  266  bundle exec rails s -b 0.0.0.0
+  267  vi Gemfile
+  268  history | grep "sqlite3"
+  269  gem install sqlite3 -- --with-sqlite3-lib=/usr/local/lib
+  270  bundle exec rails s -b 0.0.0.0
+  271  vi ../setup.bash
+  272  git log
+  273  git status
+  274  git init
+  275  rm -rf .git
+  276  cd ../
+  277  git init
+  278  git add .
+  279  git commit -m "first commit"
+  280  git checkout -f
+  281  git add .
+  282  git commit -m "first commit"
+  283  git remote add origin git@github.com:RuBisCO28/rails_test.git
+  284  git push -u origin master
+  285  ls -lrt
+  286  vi setup.bash
+  287  cat setup.bash
+  288  rails _6.0.0_ new toy_app
+  289  ls -lrt
+  290  cd toy_app/
+  291  cat ../setup.bash
+  292  bundle exec rails s -b 0.0.0.0
+  293  vi Gemfile
+  294  mv Gemfile ../
+  295  ls -lrt
+  296  cd ../
+   297  ls -lrt
+  298  rm -rf toy_app
+  299  rails _6.0.0_ new toy_app
+  300  cd toy_app/
+  301  ls -lrt
+  302  rm Gemfile
+  303  mv ../Gemfile .
+  304  ls -lrt
+  305  bundle install --without production
+  306  vi Gemfile
+  307  bundle install --without production
+  308  bundle update
+  309  vi Gemfile
+  310  bundle install --without production
+  311  vi Gemfile
+  312  bundle install --without production
+  313  git init
+  314  rm -rf .git
+  315  cd ../
+  316  git add -A
+  317  git commit -m "Create toyapp project"
+  318  git push -u origin master
+  319  cd toy_app/
+  320  ls -lrt
+  321  vi app/controllers/application_controller.rb
+  322  vi config/routes.rb
+  323  history | grep "bundle"
+  324  bundle exec rails s -b 0.0.0.0
+  325  vi Gemfile
+  326  bundle update
+  327  bundle exec rails s -b 0.0.0.0
+  328  vi Gemfile
+  329  bundle install
+  330  bundle uninstall
+  331  gem uninstall -I -a -x --user-install --force
+  332  gem install bundler
+  333  ls -lrt
+  334  rm Gemfile.lock
+  335  bundle install
+  336  ls -lt
+  337  vi Gemfile
+  338  bundle exec rails s -b 0.0.0.0
+  339  vi Gemfile
+  340  cd ../
+  341  rm -rd toy_app
+  342  rm -rf toy_app
+  343  ls -lrt
+  344  rails _6.0.0_ new toy_app
+  345  ls -lrt
+  346  rails -v
+  347  cat setup.bash
+  348  source ~/.bash_profile
+  349  rails
+  350  ls -lrt
+  351  rails _6.0.0_ new toy_app
+  352  ls -lrt
+  353  cd toy_app/
+  354  vi app/controllers/application_controller.rb
+  355  vi config/routes.rb
+    356  bundle exec rails s -b 0.0.0.0
+  357  cat ../setup.bash
+  358  gem install sqlite3 -- --with-sqlite3-lib=/usr/local/lib
+  359  cat ../setup.bash 
+  360  bundle exec rails s -b 0.0.0.0
+  361  rails generate scaffold User name:string email:string
+  362  rails db:migrate
+  363  bundle exec rails s -b 0.0.0.0
+  364  vi config/routes.rb 
+  365  vi app/controllers/users_controller.rb 
+  366  vi app/views/users/edit.html.erb 
+  367  vi app/controllers/users_controller.rb 
+  368  rails generate scaffold Micropost content:text user_id:integer
+  369  rails db:migrate
+  370  vi config/routes.rb 
+  371  bundle exec rails s -b 0.0.0.0
+  372  vi app/models/micropost.rb 
+  373  bundle exec rails s -b 0.0.0.0
+  374  vi app/models/user.rb 
+  375  vi app/models/micropost.rb 
+  376  rails console
+  377  bundle exec rails s -b 0.0.0.0
+  378  vi app/models/user.rb 
+  379  vui app/models/micropost.rb 
+  380  vi app/models/micropost.rb 
+  381  vi app/views/microposts/show.html.erb 
+  382  bundle exec rails s -b 0.0.0.0
+  383  vi config/routes.rb 
+  384  vi app/models/user.rb 
+  385  vi app/models/micropost.rb 
+  386  vi app/models/application_record.rb 
+  387  vi app/views/users/index.html.erb 
+  388  vi app/views/microposts/index.
+  389  vi app/views/microposts/index.html.erb 
+  390  vi app/views/users/index.html.erb 
+  391  vi app/views/users/show.html.erb 
+  392  bundle exec rails s -b 0.0.0.0
+  393  vi app/models/micropost.rb 
+  394  vi app/models/user.rb 
+  395  bundle exec rails s -b 0.0.0.0
+  396  vi app/models/user.rb 
+  397  vi app/models/micropost.rb 
+  398  vi app/models/user.rb 
+  399  bundle exec rails s -b 0.0.0.0
+  400  vi app/models/user.rb 
+  401  bundle exec rails s -b 0.0.0.0
+  402  vi app/models/application_record.rb 
+  403  vi app/controllers/application_controller.rb 
+  404  vi app/controllers/microposts_controller.rb 
+  405  vi app/controllers/users_controller.rb 
+  406  git status
+  407  git add -A
+  408  git commit -m "Finish toy app"
+  409  git push -u origin master
+  410  cd ../
+  411  cd toy_app/
+  412  git checkout -f
+  413  cd ../
+  414  git add -A
+   415  git commit -m "Finish toy app"
+  416  git push -u origin master

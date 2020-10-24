@@ -1,0 +1,16 @@
+// Only change code below this line
+var i = 0;
+function countdown(n){
+  if (n < 1){
+    return [];
+  } else {
+    i++;
+    const countArray = countdown(n-1);
+    countArray.push(i);
+    i--;
+    return countArray;
+  }
+  
+}
+// Only change code above this line
+console.log(countdown(5));
