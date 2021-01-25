@@ -92,7 +92,7 @@ console.log(x, y);
 
 const averageAge= ageJonas + ageSarah / 2;
 console.log(ageJonas, ageSarah, averageAge);
-*/
+
 
 // Coding Challenge #1
 // const weightOfMark = 78;
@@ -111,3 +111,70 @@ const BMIOfJohn = weightOfJohn / (heightOfJohn * heightOfJohn);
 const markHigherBMI = BMIOfMark > BMIOfJohn;
 
 console.log(BMIOfMark, BMIOfJohn, markHigherBMI);
+
+
+
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+
+const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+console.log(jonas)
+
+// template literal
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew);
+
+console.log(`Just a regular string...`);
+
+console.log(`String with \n\
+multiple \n\
+lines`)
+
+console.log(`String 
+multiple
+lines`)
+
+const age = 19;
+const isOldEnough = age >= 18;
+
+if(isOldEnough) {
+    console.log(`Sarah can start driving license`);
+} else {
+    const yearLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear = 1998;
+let century;
+
+if(birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);
+
+*/
+
+// Coding Challenge #2
+const weightOfMark = 78;
+const heightOfMark = 1.69;
+const weightOfJohn = 92;
+const heightOfJohn = 1.95;
+
+//const weightOfMark = 95;
+//const heightOfMark = 1.88;
+//const weightOfJohn = 85;
+//const heightOfJohn = 1.76;
+
+const BMIOfMark = weightOfMark / heightOfMark ** 2;
+const BMIOfJohn = weightOfJohn / (heightOfJohn * heightOfJohn);
+
+if(BMIOfMark > BMIOfJohn) {
+    console.log(`Mark's BMI(${BMIOfMark}) is higher than John's(${BMIOfJohn})!`);
+} else {
+    console.log(`John's BMI(${BMIOfJohn}) is higher than Mark's(${BMIOfMark})!`);
+}
