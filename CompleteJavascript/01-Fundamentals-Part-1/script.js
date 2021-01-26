@@ -157,7 +157,7 @@ if(birthYear <= 2000) {
 
 console.log(century);
 
-*/
+
 
 // Coding Challenge #2
 const weightOfMark = 78;
@@ -177,4 +177,156 @@ if(BMIOfMark > BMIOfJohn) {
     console.log(`Mark's BMI(${BMIOfMark}) is higher than John's(${BMIOfJohn})!`);
 } else {
     console.log(`John's BMI(${BMIOfJohn}) is higher than Mark's(${BMIOfMark})!`);
+}
+
+// type conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(inputYear + 18);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));
+console.log(typeof NaN); // invalid number
+
+console.log(String(23), 23);
+
+// type coercion
+console.log('I am ' + 23 + ' years old'); // different type
+console.log('I am ' + String(23) + ' years old'); 
+console.log('23' - '10' - 3);
+console.log('23' + '10' + 3);
+console.log('23' * '2');
+console.log('23' / '2');
+console.log('23' > '18');
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n);
+
+console.log(2+3+4+'5');
+
+// 5 falsy values: 0, '', undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean(''));
+console.log(Boolean({}));
+
+const money = 0;
+if(money) {
+    console.log("Don't spend it all ;)");
+} else {
+    console.log('You should get a job!')
+}
+
+let height;
+if(height) {
+    console.log('Hight is not defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
+
+const age = '18';
+if(age === 18) console.log('You just become an adult :D (strict)');
+if(age == 18) console.log('You just become an adult :D (loose)');
+
+const favorite = prompt("What's your favorite number?")
+console.log(favorite);
+console.log(typeof favorite);
+
+if ( favorite == 23){ // '23' == 23
+    console.log('Cool! 23!');
+} else if(favorite === 7){
+    console.log('7 is also a cool number')
+} else {
+    console.log('Number is not 23 or 7');
+}
+
+if(favorite !== 23) console.log('Why not 23?')
+
+const hasDriverLicense = true; // A
+const hasGoodVision = false; // B
+
+console.log(hasDriverLicense && hasGoodVision);
+console.log(hasDriverLicense || hasGoodVision);
+console.log(!hasDriverLicense);
+
+const shouldDrive = hasDriverLicense && hasGoodVision;
+
+if(shouldDrive) {
+    console.log('Sarah is able to drive!')
+} else {
+    console.log('Someone else should drive...')
+}
+
+const isTired = true; // C
+console.log(hasDriverLicense || hasGoodVision && isTired);
+console.log(hasDriverLicense && hasGoodVision && !isTired);
+
+*/
+
+let dolphinsScoreOne = 96;
+let dolphinsScoreTwo = 108;
+let dolphinsScoreThree = 89;
+
+let koalasScoreOne = 88;
+let koalasScoreTwo = 91;
+let koalasScoreThree = 110;
+
+let dolphinsAverageScore = (dolphinsScoreOne + dolphinsScoreTwo + dolphinsScoreThree) / 3;
+let koalasAverageScore = (koalasScoreOne + koalasScoreTwo + koalasScoreThree) / 3;
+
+console.log(dolphinsAverageScore, koalasAverageScore);
+
+if (dolphinsAverageScore > koalasAverageScore) {
+    console.log('Winner is Dolphins');
+} else if (dolphinsAverageScore === koalasAverageScore) {
+    console.log('The result is draw');
+} else {
+    console.log('Winner is Koalas');
+}
+
+dolphinsScoreOne = 97;
+dolphinsScoreTwo = 112;
+dolphinsScoreThree = 101;
+koalasScoreOne = 109;
+koalasScoreTwo = 95;
+koalasScoreThree = 123;
+
+dolphinsAverageScore = (dolphinsScoreOne + dolphinsScoreTwo + dolphinsScoreThree) / 3;
+koalasAverageScore = (koalasScoreOne + koalasScoreTwo + koalasScoreThree) / 3;
+
+if(dolphinsAverageScore > 100 || koalasAverageScore > 100) {
+    if (dolphinsAverageScore > koalasAverageScore) {
+        console.log('Winner is Dolphins');
+    } else if (dolphinsAverageScore === koalasAverageScore) {
+        console.log('The result is draw');
+    } else {
+        console.log('Winner is Koalas');
+    }
+} else {
+    console.log('No winner');
+}
+
+dolphinsScoreOne = 97;
+dolphinsScoreTwo = 112;
+dolphinsScoreThree = 101;
+koalasScoreOne = 109;
+koalasScoreTwo = 95;
+koalasScoreThree = 106;
+
+if(dolphinsAverageScore > 100 || koalasAverageScore > 100) {
+    if (dolphinsAverageScore > koalasAverageScore) {
+        console.log('Winner is Dolphins');
+    } else if (dolphinsAverageScore === koalasAverageScore) {
+        console.log('The result is draw');
+    } else {
+        console.log('Winner is Koalas');
+    }
+} else {
+    if (dolphinsAverageScore === 100){
+        console.log('No winne(100)');
+    } else {
+        console.log('No winner');
+    }
 }
