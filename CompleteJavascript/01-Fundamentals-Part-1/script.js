@@ -263,7 +263,7 @@ const isTired = true; // C
 console.log(hasDriverLicense || hasGoodVision && isTired);
 console.log(hasDriverLicense && hasGoodVision && !isTired);
 
-*/
+
 
 let dolphinsScoreOne = 96;
 let dolphinsScoreTwo = 108;
@@ -296,7 +296,7 @@ koalasScoreThree = 123;
 dolphinsAverageScore = (dolphinsScoreOne + dolphinsScoreTwo + dolphinsScoreThree) / 3;
 koalasAverageScore = (koalasScoreOne + koalasScoreTwo + koalasScoreThree) / 3;
 
-if(dolphinsAverageScore > 100 || koalasAverageScore > 100) {
+if(dolphinsAverageScore >= 100 || koalasAverageScore >= 100) {
     if (dolphinsAverageScore > koalasAverageScore) {
         console.log('Winner is Dolphins');
     } else if (dolphinsAverageScore === koalasAverageScore) {
@@ -315,7 +315,7 @@ koalasScoreOne = 109;
 koalasScoreTwo = 95;
 koalasScoreThree = 106;
 
-if(dolphinsAverageScore > 100 || koalasAverageScore > 100) {
+if(dolphinsAverageScore >= 100 || koalasAverageScore >= 100) {
     if (dolphinsAverageScore > koalasAverageScore) {
         console.log('Winner is Dolphins');
     } else if (dolphinsAverageScore === koalasAverageScore) {
@@ -325,8 +325,25 @@ if(dolphinsAverageScore > 100 || koalasAverageScore > 100) {
     }
 } else {
     if (dolphinsAverageScore === 100){
-        console.log('No winne(100)');
+        console.log('No winner(100)');
     } else {
         console.log('No winner');
     }
 }
+
+if (dolphinsAverageScore > koalasAverageScore && dolphinsAverageScore >= 100) {
+    console.log('Winner is Dolphins');
+} else if (koalasAverageScore > dolphinsAverageScore && koalasAverageScore >= 100) {
+    console.log('Winner is Koalas');
+} else if (dolphinsAverageScore === koalasAverageScore && dolphinsAverageScore >= 100 && koalasAverageScore >= 100) {
+    console.log('Both are winner');
+} else {
+    console.log('No winner');
+}
+
+*/
+
+// Coding Challenge #4
+const bill = 430;
+bill >= 50 && bill <= 300 ? console.log(`The bill was ${bill}, the tip was ${bill * 0.15}, and the total value ${bill * 1.15}`) : 
+console.log(`The bill was ${bill}, the tip was ${bill * 0.2}, and the total value ${bill * 1.2}`);
