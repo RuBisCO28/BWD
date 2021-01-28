@@ -341,9 +341,41 @@ if (dolphinsAverageScore > koalasAverageScore && dolphinsAverageScore >= 100) {
     console.log('No winner');
 }
 
+const day = 'monday';
+
+switch(day) {
+    case 'monday': // day === 'monday'
+      console.log('Plan course structure');
+      console.log('Go to coding meetup');
+      break;
+    case 'tuesday':
+      console.log('Prepare therory videos')
+      break;
+    case 'wednesday':
+    case 'thursday':
+      console.log('Write code example');
+      break;
+    default:
+      console.log('Not a valid day!');
+}
+
+// statement and expressions
+console.log(`I'm ${2037-1991}` years old ${if(23>10){const str = '23 is bigger'}}``)
+
 */
+
+// ternary operator for quick decision
+const age = 23;
+age >= 18 ? console.log('I like to drink wine') : 
+console.log('I like to drink water');
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`)
 
 // Coding Challenge #4
 const bill = 430;
 bill >= 50 && bill <= 300 ? console.log(`The bill was ${bill}, the tip was ${bill * 0.15}, and the total value ${bill * 1.15}`) : 
 console.log(`The bill was ${bill}, the tip was ${bill * 0.2}, and the total value ${bill * 1.2}`);
+
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+console.log();
