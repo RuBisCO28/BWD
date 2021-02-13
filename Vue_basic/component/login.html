@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Vue.js</title>
+<script src="https://unpkg.com/vue@2.5.17"></script>
+</head>
+
+<body>
+<div id="login-example">
+  <user-login></user-login>
+</div>
+
+<script type="text/x-template" id="login-template">
+  <div id="login-template">
+    <div>
+      <input type="text" placeholder="LoginID" v-model="userid">
+    </div>
+    <div>
+      <input type="password" placeholder="Password" v-model="password">
+    </div>
+    <button @click="login()">Login</button>
+  </div>
+</script>
+
+<script src="login.js"></script>
+</body>
+</html>

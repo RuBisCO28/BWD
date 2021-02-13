@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Vue.js</title>
+</head>
+
+<body>
+<div id="app">
+  <nav>
+    <router-link to="/top">Top</router-link>
+    <router-link to="/users">Users</router-link>
+    <router-link to="/users/new?redirect=true">Register</router-link>
+    <router-link to="/login" v-show="!Auth.loggedIn()">Login</router-link>
+    <router-link to="/logout" v-show="Auth.loggedIn()">Logout</router-link>
+  </nav>
+  <router-view></router-view>
+</div>
+
+<script src="https://unpkg.com/vue@2.5.17"></script>
+<script src="https://unpkg.com/vue-router@3.0.1"></script>
+
+<!-- Template for Users -->
+<script type="text/x-template" id="user-list">
+<div>
+  <div class="loading" v-if="loading">Loading...</div>
+  <div v-if="error" class="error"> {{ error }} </div>
+  <!-- Show user name after loading -->
+  <div v-for="user in users" :key="user.id">
+    <router-link :to="{ path: '/users/' + user.id }">{{ user.name }}</router-link>
+  </div>
+</div>
+</script>
+
+<!-- Template for User Detail -->
+<script type="text/x-template" id="user-detail">
+  <div>
+    <div class="loading" v-if="loading">Loading...</div>
+    <div v-if="error" class="error"> {{ error }} </div>
+    <!-- Show user name after loading -->
+    <div v-if="user">
+      <h2>{{ user.name }}</h2>
+      <p>{{ user.description }}</p>
+    </div>
+  </div>
+</script>
+
+<!-- Template for User Create -->
+<script type="text/x-template" id="user-create">
+  <div>
+    <div class="sending" v-if="sending">Sending...</div>
+    <h2>Create New User</h2>
+    <div>
+      <label>Name: </label>
+      <input type="text" v-model="user.name">
+    </div>
+    <div>
+      <label>Description:</label>
+      <textarea v-model="user.description"></textarea>
+    </div>
+    <div v-if="error" class="error"> {{ error }} </div>
+    <div>
+      <!-- @click -->
+      <input type="button" @click="createUser" value="Send">
+    </div>
+  </div>
+</script>
+
+<!-- Template for User Login -->
+<script type="text/x-template" id="login">
+  <div>
+    <h2>Login</h2>
+    <p v-if="$route.query.redirect">
+      Please log in
+    </p>
+    <!-- @submit.prevent? -->
+    <form @submit.prevent="login">
+      <label><input v-model="email" placeholder="email"></label>
+      <label><input v-model="pass" placeholder="password" type="password"></label>
+      <br>
+      <button type="submit">Login</button>
+      <p v-if="error" class="error">Failed to login</p>
+    </form>
+  </div>
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
